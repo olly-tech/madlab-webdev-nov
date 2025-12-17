@@ -1,0 +1,104 @@
+body {
+  background-color: antiquewhite;
+}
+
+nav {
+  background-color: paleturquoise;
+}
+
+header {
+  background-color: palevioletred;
+}
+
+main {
+  background-color: salmon;
+}
+
+footer {
+  background-color: lightgoldenrodyellow;
+}
+
+aside {
+  background-color: palegreen;
+
+}
+
+
+/* ============ GRID ================ */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+nav,
+header,
+footer {
+  grid-column: 1/13;
+}
+
+main {
+  grid-column: 1/8;
+}
+
+aside {
+  grid-column: 8/13;
+
+}
+
+/* images */
+
+img {
+  width: 80%;
+}
+
+/* GRID-CEPTION */
+section {
+  /* general styles */
+  background-color: lightcyan;
+}
+
+.col1 {
+  /* 2 column layout - column 1*/
+
+  /* grid */
+  grid-column: 1/6;
+}
+
+.col2 {
+  /* 2 column layout - column 2*/
+
+  /* grid */
+  grid-column: 6/13;
+}
+
+/*======FORM GRID ====*/
+
+.form-main {
+    grid-column: 1/10;
+}
+
+.form-aside {
+   grid-column: 10/13;
+}
+
+/*============= MEDIA QUERIES ===========*/
+
+
+@media screen and (min-width: 400px) and (max-width: 600px) {
+    /* style for mobile website */
+    
+    main, aside, .col1, .col2 {
+        grid-column: 1/13;
+    }
+
+
+}
+
+/*============= JAVASCRIPT ===========*/
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
