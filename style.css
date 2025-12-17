@@ -1,13 +1,27 @@
+:root {
+  --dark: darkslategrey;
+  --light: antiquewhite;
+  --accentdark: orange;
+  --accentlight: rgb(245, 199, 113);
+  --accent2: rgb(29, 127, 193);
+}
+* {
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
 body {
-  background-color: antiquewhite;
+  background-color: var(--accent2);
 }
 
 nav {
-  background-color: paleturquoise;
+  background-color: var(--accentdark);
 }
 
 header {
-  background-color: palevioletred;
+  background-color: var(--light);
 }
 
 main {
@@ -33,18 +47,13 @@ aside {
 
 nav,
 header,
-footer {
+footer, main, aside {
   grid-column: 1/13;
+
+  text-align: center;
 }
 
-main {
-  grid-column: 1/8;
-}
 
-aside {
-  grid-column: 8/13;
-
-}
 
 /* images */
 
@@ -102,3 +111,20 @@ section {
   color: white;
 }
 
+
+/* FLEX CONTAINER */
+
+.flex-container {
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.flex-container > h2 {
+  flex-basis: 100%;
+}
+
+.card {
+  background-color: var(--accentdark);
+  flex-basis: 30%;
+}
